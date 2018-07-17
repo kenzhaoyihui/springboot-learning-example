@@ -35,7 +35,7 @@ public class CityWebFluxController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public Mono<Long> deleteCity(@PathVariable("id") Long id) {
+    public Mono<Void> deleteCity(@PathVariable("id") Long id) {
         return cityHandler.deleteCity(id);
     }
 }
